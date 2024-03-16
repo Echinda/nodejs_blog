@@ -2,11 +2,12 @@
   "name": "blog",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
+  "main": "src/index.js",
   "scripts": {
-    "start": "nodemon index.js",
-    "inspect": "nodemon --inspect index.js",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "nodemon src/index.js",
+    "inspect": "nodemon --inspect src/index.js",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "watch": "node-sass --watch src/resources/scss --output src/public/css"
   },
   "repository": {
     "type": "git",
@@ -24,9 +25,12 @@
   },
   "homepage": "https://github.com/Echinda/nodejs_blog#readme",
   "dependencies": {
-    "express": "^4.18.3"
+    "express": "^4.18.3",
+    "express-handlebars": "^7.1.2"
   },
   "devDependencies": {
+    "morgan": "^1.10.0",
+    "node-sass": "^9.0.0",
     "nodemon": "^3.1.0"
   }
 }
